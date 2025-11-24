@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../svg/Logo.svg'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,24 +21,24 @@ const Header = () => {
         <div className="hidden lg:block">
           <ul className="flex items-center gap-8">
             <li>
-              <a className="text-[14px] text-[#70737C] font-semibold hover:text-[#359740] transition-colors" href="/">
+              <NavLink className={({isActive}) => isActive ? "text-[14px] font-semibold text-[#359740] hover:text-[#359740] transition-colors" : ""}  to="/">
                 ALL PRODUCTS
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="text-[14px] text-[#70737C] font-semibold hover:text-[#359740] transition-colors" href="/about">
+              <NavLink className={({isActive}) => isActive ? "text-[14px] font-semibold text-[#359740] hover:text-[#359740] transition-colors" : ""} to="/about">
                 ABOUT SEEDRA
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="text-[14px] text-[#70737C] font-semibold hover:text-[#359740] transition-colors" href="/blog">
+              <NavLink className={({isActive}) => isActive ? "text-[14px] font-semibold text-[#359740] hover:text-[#359740] transition-colors" : ""} to="/blog">
                 OUR BLOG
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="text-[14px] text-[#70737C] font-semibold hover:text-[#359740] transition-colors" href="/contacts">
+              <NavLink className={({isActive}) => isActive ? "text-[14px] font-semibold text-[#359740] hover:text-[#359740] transition-colors" : ""} to="/contacts">
                 CONTACTS
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
